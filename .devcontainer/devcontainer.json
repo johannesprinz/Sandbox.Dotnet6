@@ -1,20 +1,26 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 {
-	"name": "Sandbox.Dotnet6",
-	"build": {
-		"context": "..",
-		"dockerfile": "../dockerfile",
-		"target": "development"
-	},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"eamodio.gitlens",
-				"ms-dotnettools.csharp",
-				"yzhang.markdown-all-in-one",
-				"shd101wyy.markdown-preview-enhanced",
-				"streetsidesoftware.code-spell-checker"
-			]
-		}
-	}
+  "name": "Sandbox.Dotnet6",
+  "build": {
+    "context": "..",
+    "dockerfile": "../dockerfile",
+    "target": "development"
+  },
+  "postCreateCommand": "doas chown -R developer .",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "eamodio.gitlens",
+        "GitHub.copilot",
+        "ms-dotnettools.csharp",
+        "yzhang.markdown-all-in-one",
+        "shd101wyy.markdown-preview-enhanced",
+        "streetsidesoftware.code-spell-checker",
+        "exiasr.hadolint",
+        "spencer-farley.xunitsnippets",
+        "svipas.prettier-plus"
+      ]
+    }
+  },
+  "remoteUser": "developer"
 }
